@@ -39,7 +39,6 @@ Add scrapers for
 * Middlesex University
 * Open University
 * Queen Mary, University of London
-* Ravensbourne
 * Regents College London
 * Rose Bruford College of Theatre and Performance
 * Royal Academy of Music
@@ -57,6 +56,12 @@ Add scrapers for
 * University of Roehampton
 * University of the Arts, London
 * University of Westminster
+
+## Avoiding doing
+
+* Ravensbourne - doesn't seem to load the vacancies unless you have cookies
+  enabled. This should not be a problem for mechanize, however, but it means
+  it will be more complicated to implement.
 
 ## License
 
