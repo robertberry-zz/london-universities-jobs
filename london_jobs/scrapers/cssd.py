@@ -1,12 +1,7 @@
 """Screen scraper for Central School of Speech & Drama job site.
 """
 
-import string
-import re
-
-from urlparse import urljoin
-
-from bs4 import BeautifulSoup
+from common import *
 
 SALARY_RE = re.compile(r'''
     ([\d,]+)            # The salary; a mix of digits and commas
@@ -31,15 +26,13 @@ class CSSD(object):
                     soup.find("table", class_="views-table").find_all("a")]
 
     def extract_job(self, soup):
-        title = str(soup.find("h1").string)
-
+        title = unicode(soup.find("h1").string)
         salary_string = soup.select(".content .field .field-items " + \
                                         ".field-item p")[0].string
-
         m = SALARY_RE.search(salary_string)
 
         if m:
-            salary = string.replace(m.group(1), ",", "")
+            salary = parse_salary(m.group(1))
         else:
             salary = None
 

@@ -1,5 +1,6 @@
 __all__ = [
     "birkbeck",
     "cssd",
-    "city"
+    "city",
+    "east_london"
 ]

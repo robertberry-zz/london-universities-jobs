@@ -1,14 +1,10 @@
 """Scraper for University websites using the iGrasp format.
 """
 
-import string
-import re
+from common import *
 
 from abc import ABCMeta, abstractproperty
-from urlparse import urljoin
 from collections import defaultdict
-
-from bs4 import BeautifulSoup
 
 SALARY_RE = re.compile(r'''
     (\d+)       # From portion of salary
