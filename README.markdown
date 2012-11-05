@@ -30,7 +30,7 @@ Add scrapers for
 * Imperial College London
 * Institute of Cancer Research
 * Institute of Education
-* King's College London
+  * King's College London
 * Kingston University London
 * London Business School
 * London School of Economics and Political Science
@@ -50,10 +50,8 @@ Add scrapers for
 * St George's, University of London
 * St Mary's University College, Twickenham
 * Trinity Laban Conservatoire of Music and Dance
-* UCL
 * UEA London
 * University of London International Programmes
-* University of Roehampton
 * University of the Arts, London
 * University of Westminster
 
@@ -62,6 +60,10 @@ Add scrapers for
 * Ravensbourne - doesn't seem to load the vacancies unless you have cookies
   enabled. This should not be a problem for mechanize, however, but it means
   it will be more complicated to implement.
+* Roehampton - the listings are PDFs, so it's difficult to extract any
+  information except the title. (This is better than nothing, however - I will
+  go back and add it.)
+* UCL - its robots.txt says to disallow computer programs from reading the site
 
 ## License
 

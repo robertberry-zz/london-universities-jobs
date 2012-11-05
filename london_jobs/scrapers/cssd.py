@@ -13,16 +13,16 @@ SALARY_RE = re.compile(r'''
 ''', re.VERBOSE)
 
 class CSSD(object):
-    ROOT_URL = "http://www.cssd.ac.uk"
+    root_url = "http://www.cssd.ac.uk"
 
-    LISTING_PAGE = "/jobs/"
+    listings_page = "/jobs/"
 
     def job_urls(self, browser):
-        browser.open(urljoin(CSSD.ROOT_URL, CSSD.LISTING_PAGE))
+        browser.open(urljoin(self.root_url, self.listings_page))
 
         soup = BeautifulSoup(browser.response().read())
 
-        return [urljoin(CSSD.ROOT_URL, link.get("href")) for link in \
+        return [urljoin(self.root_url, link.get("href")) for link in \
                     soup.find("table", class_="views-table").find_all("a")]
 
     def extract_job(self, soup):
