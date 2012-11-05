@@ -57,3 +57,7 @@ Add scrapers for
 * University of Roehampton
 * University of the Arts, London
 * University of Westminster
+
+## License
+
+Copyright Robert Berry, 2012. Licensed under the GPL 3.0. (See LICENSE.)
