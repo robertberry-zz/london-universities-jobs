@@ -6,9 +6,8 @@ from london_jobs.scrapers import *
 from mechanize import Browser
 from bs4 import BeautifulSoup
 
-sites = (
-    birkbeck.Birkbeck(),
-    )
+sites = (birkbeck.Birkbeck(),
+         cssd.CSSD(),)
 
 def main():
     browser = Browser()
@@ -18,7 +17,14 @@ def main():
             browser.open(job_url)
             html = browser.response().read()
             soup = BeautifulSoup(html)
-            job = Job(site, job_url, **site.extract_job(soup))
+
+            job_details = site.extract_job(soup)
+
+            if "uid" not in job_details:
+                # No unique ID, just use the URL:
+                job_details["uid"] = job_url
+            
+            job = Job(site, job_url, **job_details)
             print job
             if hasattr(job, "salary"):
                 print job.salary
