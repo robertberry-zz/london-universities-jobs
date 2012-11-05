@@ -7,7 +7,8 @@ from mechanize import Browser
 from bs4 import BeautifulSoup
 
 sites = (birkbeck.Birkbeck(),
-         cssd.CSSD(),)
+         #cssd.CSSD(),
+         city.City(),)
 
 def main():
     browser = Browser()
