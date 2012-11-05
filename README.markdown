@@ -7,6 +7,7 @@ Set of scrapers for pulling jobs from London-based university job sites.
 * [Birkbeck, University of London](http://www.bbk.ac.uk/)
 * [Conservatoire for Dance and Drama](http://www.cdd.ac.uk/)
 * [City University London](http://www.city.ac.uk/)
+* [University of East London](http://www.uel.ac.uk/)
 
 ## TODO
 
@@ -46,7 +47,6 @@ Add scrapers for
 * Trinity Laban Conservatoire of Music and Dance
 * UCL
 * UEA London
-* University of East London
 * University of Greenwich
 * University of London International Programmes
 * University of Roehampton
