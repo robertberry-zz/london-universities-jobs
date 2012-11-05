@@ -11,6 +11,7 @@ sites = (birkbeck.Birkbeck(),
          city.City(),
          east_london.EastLondon(),
          west_london.WestLondon(),
+         greenwich.Greenwich(),
          )
 
 def main():

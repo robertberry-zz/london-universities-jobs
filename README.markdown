@@ -13,6 +13,7 @@ opportunities in London.
 * [City University London](http://www.city.ac.uk/)
 * [University of East London](http://www.uel.ac.uk/)
 * [University of West London](http://www.uwl.ac.uk/)
+* [University of Greenwich](http://www.gre.ac.uk/)
 
 ## TODO
 
@@ -52,7 +53,6 @@ Add scrapers for
 * Trinity Laban Conservatoire of Music and Dance
 * UCL
 * UEA London
-* University of Greenwich
 * University of London International Programmes
 * University of Roehampton
 * University of the Arts, London

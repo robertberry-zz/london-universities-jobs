@@ -1,7 +1,7 @@
 """Screen scraper for University of East London job site.
 """
 
-from east_west import EastWest, header_text
+from east_west import EastWest, extract_from_headers
 
 def extract(soup):
     """The job listing does not have the fields in very easily navigable
@@ -12,9 +12,7 @@ def extract(soup):
     # initial strong is just the job title; skip over it
     soup = soup.find("strong")
     headers = soup.find_next_siblings("strong")
-
-    return dict((header_text(header.next), header.next.next) \
-                    for header in headers)
+    return extract_from_headers(headers)
 
 class EastLondon(EastWest):
     root_url = "http://jobs.uel.ac.uk"

@@ -1,6 +1,10 @@
 """Base scraper class for East and West Universities of London. Much of how
 both the sites work is very similar, so the code for dealing with that is
 encapsulated here.
+
+Note: Greenwich descends from this, too. Once I have a full list of all the
+Uni job sites that use this, I'll come up with a more appropriate name and
+refactor the code.
 """
 
 from abc import ABCMeta, abstractproperty, abstractmethod
@@ -19,6 +23,10 @@ SALARY_RE = re.compile(u'''
 
 def header_text(header):
     return header.replace(u': \xa0', u'')
+
+def extract_from_headers(tags):
+    return dict((header_text(header.next), header.next.next) \
+                        for header in tags)
 
 class EastWest(object):
     """Base class for East London and West London scrapers.
