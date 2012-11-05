@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from london_jobs.jobs import Job
 from london_jobs.scrapers import *
 
 from mechanize import Browser
@@ -17,7 +18,10 @@ def main():
             browser.open(job_url)
             html = browser.response().read()
             soup = BeautifulSoup(html)
-            print site.extract_job(soup)
+            job = Job(site, job_url, **site.extract_job(soup))
+            print job
+            if hasattr(job, "salary"):
+                print job.salary
 
 if __name__ == '__main__':
     main()
