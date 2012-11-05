@@ -21,21 +21,35 @@ class IGrasp(object):
 
     @abstractproperty
     def root_url(self):
+        """Root url for the site.
+        """
         pass
 
     @abstractproperty
     def listing_page(self):
+        """The listing search page (relative from the root url).
+        """
         pass
 
     @abstractproperty
     def field_map(self):
+        """Map of fields in the table at the top of the job page to Job
+        properties.
+        """
         pass
     
     def job_urls(self, browser):
         def extract_page_urls(soup):
+            """Given a BeautifulSoup object for a search results page, extract
+            all of the urls for jobs.
+            """
             return soup.select("td.igsearchresultstitle a")
 
         def get_next_page_url(soup):
+            """Given a BeautifulSoup object for a search results page, return
+            the URL of the next search results page if there is one, otherwise
+            return None.
+            """
             elem = soup.select("a.nextbullet")
 
             try:
