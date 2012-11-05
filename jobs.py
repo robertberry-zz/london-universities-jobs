@@ -9,7 +9,9 @@ from bs4 import BeautifulSoup
 sites = (birkbeck.Birkbeck(),
          cssd.CSSD(),
          city.City(),
-         east_london.EastLondon(),)
+         east_london.EastLondon(),
+         west_london.WestLondon(),
+         )
 
 def main():
     browser = Browser()

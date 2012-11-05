@@ -1,6 +1,10 @@
 # London University Jobs
 
-Set of scrapers for pulling jobs from London-based university job sites.
+Set of scrapers for extracting job details from University job sites in
+London.
+
+A tool I wrote to help my flat mate keep track of academic related job
+opportunities in London.
 
 ## Scrapers
 
@@ -8,6 +12,7 @@ Set of scrapers for pulling jobs from London-based university job sites.
 * [Conservatoire for Dance and Drama](http://www.cdd.ac.uk/)
 * [City University London](http://www.city.ac.uk/)
 * [University of East London](http://www.uel.ac.uk/)
+* [University of West London](http://www.uwl.ac.uk/)
 
 ## TODO
 
@@ -51,5 +56,4 @@ Add scrapers for
 * University of London International Programmes
 * University of Roehampton
 * University of the Arts, London
-* University of West London
 * University of Westminster
