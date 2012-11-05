@@ -30,7 +30,7 @@ Add scrapers for
 * Imperial College London
 * Institute of Cancer Research
 * Institute of Education
-  * King's College London
+* King's College London
 * Kingston University London
 * London Business School
 * London School of Economics and Political Science
@@ -53,7 +53,6 @@ Add scrapers for
 * UEA London
 * University of London International Programmes
 * University of the Arts, London
-* University of Westminster
 
 ## Avoiding doing
 
@@ -63,7 +62,11 @@ Add scrapers for
 * Roehampton - the listings are PDFs, so it's difficult to extract any
   information except the title. (This is better than nothing, however - I will
   go back and add it.)
-* UCL - its robots.txt says to disallow computer programs from reading the site
+* UCL - its robots.txt says to disallow computer programs from reading the
+  site
+* Westminster - the links on its job site use JavaScript to build a form
+  rather than having actual links to urls. Mechanize doesn't have a JavaScript
+  engine so I would have to write messy code to get this to work.
 
 ## License
 
